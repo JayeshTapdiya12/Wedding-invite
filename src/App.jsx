@@ -7,7 +7,7 @@ import Gallery from "./components/Gallery";
 import Venue from "./components/Venue";
 import RSVP from "./components/RSVP";
 import Invitation from "./components/Invitation";
-import Countdown from "./components/CountDown";
+// import Countdown from "./components/CountDown";
 
 function App() {
   const [stage, setStage] = useState("envelope");
