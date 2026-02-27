@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '../style/CoupleReveal.css';
 import CountDown from './CountDown';
 
-const CoupleReveal = ({ onComplete }) => {
+const CoupleReveal = () => {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
