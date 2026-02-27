@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Dancing+Script:wght@700&display=swap");
+
+:root {
+  /* Color Palette */
+  --bg-cream: #fdfaf6;
+  --sage-green: #9fb896;
+  --royal-gold: #c5a059;
+  --deep-emerald: #1a3026;
+  --text-shadow: rgba(0, 0, 0, 0.2);
+  --flap-shadow: rgba(0, 0, 0, 0.15);
+
+  /* Animation Settings */
+  --anim-speed: 5s;
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Main Container --- */
+.full-screen-envelope {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  background-color: var(--bg-cream);
+  overflow: hidden;
+  perspective: 2000px;
+}
+
+/* --- Flap Logic --- */
+.flap {
+  position: absolute;
+  inset: 0;
+  background-color: var(--sage-green);
+  backface-visibility: hidden;
+  transition:
+    transform var(--anim-speed) var(--bezier),
+    opacity 2s ease-in-out 3s;
+  z-index: 5;
+}
+
+.flap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/image.png") repeat;
+  background-size: 400px;
+  opacity: 0.3;
+}
+
+/* Individual Flap Shapes & Positions */
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+  z-index: 8;
+  transform-origin: top;
+  filter: drop-shadow(0 4px 5px var(--flap-shadow));
+}
+.bottom {
+  clip-path: polygon(0% 100%, 50% 50%, 100% 100%);
+  z-index: 7;
+  transform-origin: bottom;
+  filter: brightness(0.9) drop-shadow(0 -4px 5px var(--flap-shadow));
+}
+.left {
+  clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+  transform-origin: left;
+  filter: brightness(0.9) drop-shadow(4px 0 5px var(--flap-shadow));
+}
+.right {
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+  transform-origin: right;
+  filter: brightness(0.9) drop-shadow(-4px 0 5px var(--flap-shadow));
+}
+
+/* --- Wax Seal --- */
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(140px, 35vw, 190px);
+  height: clamp(140px, 35vw, 190px);
+  /* background-color: #c7ffd8; */
+  border: 3px solid var(--royal-gold);
+  border-radius: 50%;
+  z-index: 15;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition:
+    opacity 1s ease,
+    transform 0.5s var(--bezier);
+}
+
+.wax-seal:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.seal-logo {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* --- Hindi Typography --- */
+.exclusive-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  font-family: "Kalam", cursive;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  color: var(--royal-gold);
+  text-shadow: 2px 2px 4px var(--text-shadow);
+  text-align: center;
+  white-space: nowrap;
+  transition: opacity 1s ease;
+  animation: gentlePulse 3s infinite ease-in-out;
+}
+
+/* --- Interaction States --- */
+.is-open .top {
+  transform: rotateX(125deg);
+  z-index: 1;
+}
+.is-open .bottom {
+  transform: rotateX(-125deg);
+}
+.is-open .left {
+  transform: rotateY(-125deg);
+}
+.is-open .right {
+  transform: rotateY(125deg);
+}
+
+.is-open .wax-seal,
+.is-open .exclusive-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Animations --- */
+@keyframes gentlePulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+}

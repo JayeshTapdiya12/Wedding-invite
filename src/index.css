@@ -1,0 +1,17 @@
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cinzel", serif;
+  background: #1a0208;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,14 @@
+.rsvp-section {
+  padding: 80px 20px;
+  background: #4b0f1f;
+  text-align: center;
+}
+
+.rsvp-button {
+  background: #d4af37;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}

@@ -1,0 +1,13 @@
+/* Hero.css */
+
+.hero-section {
+  min-height: 100vh;
+  background: #1a0208;
+  color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  text-align: center;
+}

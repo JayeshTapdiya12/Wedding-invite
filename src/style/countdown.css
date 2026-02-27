@@ -1,0 +1,97 @@
+.countdown-section {
+  position: relative;
+  padding: 80px 20px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a241e; /* Fallback dark green */
+}
+
+.floral-overlay-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1525253013412-55c1a69a5738?q=80&w=2000");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.floral-overlay-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 38, 32, 0.8); /* Dark Sage tint */
+}
+
+.countdown-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px; /* Constrain width to keep the 2x2 tight */
+}
+
+.countdown-header {
+  font-family: "Playfair Display", serif;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* 2x2 Grid Logic */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+  grid-template-rows: repeat(2, auto); /* 2 Rows */
+  gap: 15px; /* Spacing between boxes */
+}
+
+.grid-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 35px 10px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.grid-box:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+}
+
+.num {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d4af37;
+  margin-top: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Mobile Tweak */
+@media (max-width: 400px) {
+  .num {
+    font-size: 2.2rem;
+  }
+  .grid-box {
+    padding: 25px 5px;
+  }
+}

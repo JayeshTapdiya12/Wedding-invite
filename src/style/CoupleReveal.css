@@ -1,0 +1,192 @@
+:root {
+  --primary: #ffffff;
+  --accent: #d4af37;
+  --easing: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-wrapper {
+  position: relative;
+  /* Allow actual scrolling by setting a large height */
+  min-height: 180vh;
+  width: 100vw;
+  background-color: #000;
+  color: var(--primary);
+  font-family: "Playfair Display", serif;
+  overflow-x: hidden;
+}
+
+/* 1. Background Entrance */
+.bg-hero {
+  position: fixed; /* Keeps image behind while you scroll */
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.1);
+  transition:
+    opacity 2s ease-in-out,
+    transform 10s linear;
+  z-index: 0;
+}
+
+.animate-start .bg-hero {
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* 2. Content Layout */
+.content-reveal {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 3. The Name Animation Fix - Targeted by Class */
+.reveal-box .eyebrow,
+.reveal-box .first-name,
+.reveal-box .ampersand,
+.reveal-box .second-name,
+.reveal-box .details-row {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1.5s var(--easing),
+    transform 1.5s var(--easing);
+}
+
+/* The Staggered Entrance Sequence */
+.animate-start .eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.animate-start .first-name {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.animate-start .ampersand {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.1s;
+}
+
+.animate-start .second-name {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.4s; /* This is Julia's entrance */
+}
+
+.animate-start .details-row {
+  opacity: 0.8;
+  transform: translateY(0);
+  transition-delay: 1.8s;
+}
+
+/* 4. Scroll Indicator */
+.scroll-indicator {
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transition: all 1s var(--easing) 2.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animate-start .scroll-indicator {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.scroll-indicator p {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Typography & Visuals */
+.main-title {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  margin: 20px 0;
+  line-height: 1;
+}
+
+.ampersand {
+  color: var(--accent);
+  font-style: italic;
+  font-size: 0.6em;
+  margin: 5px 0;
+}
+
+.details-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  letter-spacing: 3px;
+}
+
+.divider-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Mouse Animation */
+.mouse {
+  width: 20px;
+  height: 32px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  position: relative;
+}
+
+.wheel {
+  width: 2px;
+  height: 6px;
+  background: white;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 2s infinite;
+}
+
+@keyframes scroll-wheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+}
