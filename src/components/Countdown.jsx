@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../style/countdown.css';
 
-const Countdown = () => {
+const CountDown = () => {
     const [timeLeft, setTimeLeft] = useState({
         days: 0, hours: 0, minutes: 0, seconds: 0
     });
@@ -57,4 +57,4 @@ const Countdown = () => {
     );
 };
 
-export default Countdown;
+export default CountDown;

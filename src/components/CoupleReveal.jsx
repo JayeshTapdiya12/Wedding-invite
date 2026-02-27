@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import '../style/CoupleReveal.css';
-import Countdown from './CountDown';
+import CountDown from './CountDown';
 
 const CoupleReveal = ({ onComplete }) => {
     const [animate, setAnimate] = useState(false);
@@ -55,7 +55,7 @@ const CoupleReveal = ({ onComplete }) => {
 
                 {/* Placeholder for content below to test scrolling */}
                 <div style={{ height: '25vh', background: '#121212' }}></div>
-                <Countdown />
+                <CountDown />
                 <div style={{ height: '25vh', background: '#121212' }}></div>
 
 
