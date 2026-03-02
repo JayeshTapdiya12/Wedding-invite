@@ -7,7 +7,9 @@ const CountDown = () => {
     });
 
     useEffect(() => {
-        const targetDate = new Date("March 28, 2026 00:00:00").getTime();
+        // Target date: March 31, 2026
+        const targetDate = new Date("March 31, 2026 00:00:00").getTime();
+
         const interval = setInterval(() => {
             const now = new Date().getTime();
             const difference = targetDate - now;
@@ -23,33 +25,39 @@ const CountDown = () => {
                 });
             }
         }, 1000);
+
         return () => clearInterval(interval);
     }, []);
 
     return (
         <section className="countdown-section">
-            <div className="floral-overlay-bg"></div>
+            <div className="countdown-container reveal-fade-up">
+                <h2 className="countdown-title">Countdown</h2>
+                <p className="countdown-subtitle">27 - 31 MARCH 2026</p>
 
-            <div className="countdown-content">
-                <h2 className="countdown-header">The Celebration Begins In</h2>
-
-                {/* The 2x2 Grid Container */}
                 <div className="countdown-grid">
-                    <div className="grid-box">
-                        <span className="num">{timeLeft.days}</span>
+                    <div className="time-box">
+                        {/* Adding a key triggers the animation every time the number changes */}
+                        <span key={timeLeft.days} className="number tick-animation">{timeLeft.days}</span>
                         <span className="label">Days</span>
                     </div>
-                    <div className="grid-box">
-                        <span className="num">{String(timeLeft.hours).padStart(2, '0')}</span>
+                    <div className="time-box">
+                        <span key={timeLeft.hours} className="number tick-animation">
+                            {String(timeLeft.hours).padStart(2, '0')}
+                        </span>
                         <span className="label">Hours</span>
                     </div>
-                    <div className="grid-box">
-                        <span className="num">{String(timeLeft.minutes).padStart(2, '0')}</span>
-                        <span className="label">Mins</span>
+                    <div className="time-box">
+                        <span key={timeLeft.minutes} className="number tick-animation">
+                            {String(timeLeft.minutes).padStart(2, '0')}
+                        </span>
+                        <span className="label">Minutes</span>
                     </div>
-                    <div className="grid-box">
-                        <span className="num">{String(timeLeft.seconds).padStart(2, '0')}</span>
-                        <span className="label">Secs</span>
+                    <div className="time-box">
+                        <span key={timeLeft.seconds} className="number tick-animation">
+                            {String(timeLeft.seconds).padStart(2, '0')}
+                        </span>
+                        <span className="label">Seconds</span>
                     </div>
                 </div>
             </div>

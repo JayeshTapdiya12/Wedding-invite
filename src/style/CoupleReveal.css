@@ -1,24 +1,20 @@
-:root {
-  --primary: #ffffff;
-  --accent: #d4af37;
-  --easing: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 .page-wrapper {
   position: relative;
-  /* Allow actual scrolling by setting a large height */
-  min-height: 180vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: #000;
-  color: var(--primary);
+  background-color: #000; /* This covers the area after the photo */
+  color: #ffffff; /* Replaced --primary */
   font-family: "Playfair Display", serif;
   overflow-x: hidden;
 }
 
 /* 1. Background Entrance */
 .bg-hero {
-  position: fixed; /* Keeps image behind while you scroll */
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   opacity: 0;
   transform: scale(1.1);
   transition:
@@ -41,7 +37,9 @@
 .overlay-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.9) 100%);
+  background:
+    linear-gradient(to bottom, transparent 70%, #000 100%),
+    radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 /* 2. Content Layout */
@@ -56,7 +54,7 @@
   text-align: center;
 }
 
-/* 3. The Name Animation Fix - Targeted by Class */
+/* 3. The Name Animation Sequence */
 .reveal-box .eyebrow,
 .reveal-box .first-name,
 .reveal-box .ampersand,
@@ -65,11 +63,10 @@
   opacity: 0;
   transform: translateY(30px);
   transition:
-    opacity 1.5s var(--easing),
-    transform 1.5s var(--easing);
+    opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    /* Replaced --easing */ transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* The Staggered Entrance Sequence */
 .animate-start .eyebrow {
   opacity: 1;
   transform: translateY(0);
@@ -91,7 +88,7 @@
 .animate-start .second-name {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 1.4s; /* This is Julia's entrance */
+  transition-delay: 1.4s;
 }
 
 .animate-start .details-row {
@@ -107,7 +104,7 @@
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transition: all 1s var(--easing) 2.5s;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 2.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +133,7 @@
 }
 
 .ampersand {
-  color: var(--accent);
+  color: #d4af37; /* Replaced --accent */
   font-style: italic;
   font-size: 0.6em;
   margin: 5px 0;
@@ -153,7 +150,7 @@
 .divider-dot {
   width: 4px;
   height: 4px;
-  background: var(--accent);
+  background: #d4af37; /* Replaced --accent */
   border-radius: 50%;
 }
 

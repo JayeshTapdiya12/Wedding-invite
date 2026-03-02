@@ -1,0 +1,126 @@
+.explore-gold-section {
+  background-color: rgb(197, 164, 109); /* Your Gold BG */
+  padding: 100px 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.explore-container {
+  max-width: 600px; /* Kept narrow for the vertical "one by one" look */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.explore-main-title {
+  font-size: 3rem;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.explore-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  opacity: 0.9;
+}
+
+.landmark-vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.explore-card-vertical {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden; /* Ensures image corners match card corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.explore-card-vertical:hover {
+  transform: translateY(-8px);
+}
+
+.card-image-box {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.place-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the space without stretching */
+  transition: transform 0.5s ease;
+}
+
+.explore-card-vertical:hover .place-image {
+  transform: scale(1.05);
+}
+
+.card-content-box {
+  padding: 30px;
+  text-align: left;
+}
+
+.city-tag {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: rgb(197, 164, 109);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.place-name {
+  font-size: 1.8rem;
+  color: #222222;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.place-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+  font-family: sans-serif; /* Cleaner for descriptions */
+}
+
+.explore-footer {
+  margin-top: 80px;
+}
+
+.vase-icon {
+  width: 100px;
+  filter: brightness(0) invert(1); /* Makes the flask white on gold */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .explore-main-title {
+    font-size: 2.2rem;
+  }
+  .card-image-box {
+    height: 200px;
+  }
+  .card-content-box {
+    padding: 20px;
+  }
+}
+
+.gold-line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, #e9dac1);
+  background-size: 200% 100%;
+  margin: 20px auto;
+  position: relative;
+}

@@ -1,5 +1,110 @@
-.venue-section {
-  padding: 80px 20px;
-  background: #0f3d2e;
-  color: #fff;
+.venue-section-gold {
+  background-color: rgb(197, 164, 109); /* Your specific Gold RGB */
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.venue-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.venue-main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.venue-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  opacity: 0.9;
+}
+
+.venue-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.venue-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.venue-illustration {
+  width: 100%;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 20px;
+}
+
+.venue-illustration img {
+  max-width: 200px;
+  height: auto;
+}
+
+.venue-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: rgb(197, 164, 109); /* Matching text to the section background */
+  margin-bottom: 10px;
+}
+
+.venue-date {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.venue-address {
+  font-size: 0.95rem;
+  color: #777777;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.map-link-btn {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.map-link-btn:hover {
+  color: rgb(197, 164, 109);
+  border-color: rgb(197, 164, 109);
+}
+
+@media (max-width: 600px) {
+  .venue-main-title {
+    font-size: 2.5rem;
+  }
+  .venue-section-gold {
+    padding: 60px 20px;
+  }
+  .venue-card {
+    padding: 30px 20px;
+  }
 }

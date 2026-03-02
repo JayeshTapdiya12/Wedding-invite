@@ -7,7 +7,13 @@ import Gallery from "./components/Gallery";
 import Venue from "./components/Venue";
 import RSVP from "./components/RSVP";
 import Invitation from "./components/Invitation";
-// import Countdown from "./components/CountDown";
+import CountDown from "./components/CountDown";
+import './App.css';
+import WelcomeSection from "./components/WelcomeSection";
+import ImageCarousel from "./components/ImageCarousel";
+import ExploreSection from "./components/ExploreSection";
+import DressCodeSection from "./components/DressCodeSection";
+
 
 function App() {
   const [stage, setStage] = useState("envelope");
@@ -37,19 +43,25 @@ function App() {
       {stage === "reveal" && (
         <>
           <CoupleReveal onComplete={() => setStage("main")} />
+          <CountDown />
+          <WelcomeSection />
+          <ImageCarousel />
+          <Venue />
+          <Schedule />
+          <ExploreSection />
+          <DressCodeSection />
+          {/* <RSVP /> */}
+          <ImageCarousel />
+
         </>
       )}
 
       {stage === "main" && (
         <>
-          {/* <Countdown /> */}
 
           <Flowers />
           <Hero />
-          <Schedule />
           <Gallery />
-          <Venue />
-          <RSVP />
         </>
       )}
     </>

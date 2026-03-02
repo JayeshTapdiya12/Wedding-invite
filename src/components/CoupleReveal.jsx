@@ -19,7 +19,7 @@ const CoupleReveal = () => {
 
                 <div className="bg-hero">
                     <img
-                        src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000"
+                        src="./coverimg.jpeg"
                         alt="Couple"
                         className="hero-image"
                     />
@@ -54,9 +54,9 @@ const CoupleReveal = () => {
                 </main>
 
                 {/* Placeholder for content below to test scrolling */}
-                <div style={{ height: '25vh', background: '#121212' }}></div>
-                <CountDown />
-                <div style={{ height: '25vh', background: '#121212' }}></div>
+                {/* <div style={{ height: '25vh', background: '#121212' }}></div> */}
+                {/* <CountDown /> */}
+                {/* <div style={{ height: '25vh', background: '#121212' }}></div> */}
 
 
             </div>
