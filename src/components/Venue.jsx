@@ -1,5 +1,5 @@
 import React from "react";
-import '../style/venue.css';
+import '../style/Venue.css';
 
 const Venue = () => {
     return (
