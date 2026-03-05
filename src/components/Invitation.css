@@ -28,7 +28,7 @@
 .flap {
   position: absolute;
   inset: 0;
-  background-color: var(--sage-green);
+  /* background-color: var(--sage-green); */
   backface-visibility: hidden;
   transition:
     transform var(--anim-speed) var(--bezier),
