@@ -3,10 +3,7 @@ import '../style/WelcomeSection.css';
 
 const WelcomeSection = () => {
     useEffect(() => {
-        const observerOptions = {
-            threshold: 0.1,
-        };
-
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -15,53 +12,72 @@ const WelcomeSection = () => {
             });
         }, observerOptions);
 
-        // Select all elements we want to animate
         const elements = document.querySelectorAll(".reveal");
         elements.forEach((el) => observer.observe(el));
-
         return () => observer.disconnect();
     }, []);
 
     return (
         <section className="welcome-light-section">
             <div className="welcome-container">
-                {/* Header with a soft fade-down */}
-                <h2 className="welcome-header-script reveal fade-down">Welcome!</h2>
-
-                <div className="welcome-body-content">
-                    <p className="namaste-text reveal fade-up delay-1">Namaste & Welcome,</p>
-
-                    <div className="story-highlight-box reveal fade-up delay-2">
-                        <p className="plot-twist-line">
-                            Plot twist: This is an arranged marriage. <br />
-                            <span className="voluntarily-tag">Yes… voluntarily. 😌</span>
-                        </p>
-                    </div>
-
-                    <p className="narrative-text reveal fade-up delay-3">
-                        Two families met. Conversations happened. Horoscopes probably approved.
-                        And somewhere between “formal introductions” and “coffee discussions,”
-                        a forever was decided.
-                    </p>
-
-                    <p className="location-text reveal fade-up delay-4">
-                        From our home city of <strong>Indore & Mhow</strong> to the royal charm of <strong>Pushkar</strong>,
-                        we’re upgrading from strangers-on-paper to partners-for-life.
-                    </p>
-
-                    <div className="vibe-check reveal fade-up delay-5">
-                        <p>There will be legendary food.</p>
-                        <p>There will be ambitious dance moves.</p>
-                        <p>There will be stories that live on in family groups forever.</p>
-                    </div>
+                {/* Main Headline */}
+                <div className="welcome-header reveal fade-down">
+                    <h2 className="marrying-tag">WE’RE GETTING MARRIED!!</h2>
+                    <p className="celebrate-with-us">And we’d love for you to celebrate it with us.</p>
                 </div>
 
-                <div className="welcome-footer-divider reveal scale-in delay-6">
-                    <div className="gold-line shimmer"></div>
+                <div className="welcome-body-content">
+                    {/* The Origin Story */}
+                    <div className="story-card reveal fade-up delay-1">
+                        <p className="narrative-text">
+                            Two families met. Conversations happened. <br />
+                            <span className="italic-sub">Horoscopes probably approved.</span>
+                        </p>
+
+                        <div className="divider-diamond"></div>
+
+                        <p className="narrative-text">
+                            And somewhere between <span className="highlight-text">“formal introductions”</span> <br />
+                            and a few <span className="highlight-text">“coffee conversations”</span>, <br />
+                            a forever quietly took shape.
+                        </p>
+
+                        {/* The Promise */}
+                        <div className="vow-box reveal fade-up delay-2">
+                            <p className="no-drama">No dramatic twists. No long speeches.</p>
+                            <p className="choosing-each-other">Just two people, choosing each other —</p>
+                            <h3 className="always-text">TODAY, TOMORROW, ALWAYS.</h3>
+                        </div>
+
+                        {/* The Call to Action */}
+                        <div className="location-vibe reveal fade-up delay-3">
+                            <p className="now-time">Now it’s time to celebrate!</p>
+                            <p className="location-call">
+                                Join us in <strong>Indore</strong>, celebrate with us <br />
+                                under the open skies of <strong>Pushkar!</strong>
+                            </p>
+                        </div>
+
+                        {/* The Friendly Ultimatum */}
+                        <div className="final-instruction reveal fade-up delay-4">
+                            <div className="instruction-row">
+                                <span>Clear your calendar.</span>
+                                <span className="dot"></span>
+                                <span>Cancel your excuses.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Footer Disclaimer */}
+                <div className="welcome-footer-divider reveal scale-in delay-5">
+                    <div className="gold-line"></div>
                     <p className="final-call">
-                        Your presence isn’t optional — it’s part of the celebration.
+                        Your presence isn’t optional — <br />
+                        <strong>it’s part of the celebration!</strong>
                     </p>
-                    <div className="gold-line shimmer"></div>
+                    <div className="gold-line"></div>
                 </div>
             </div>
         </section>

@@ -22,8 +22,11 @@ const ImageCarousel = () => {
     return (
         <section className="carousel-dark-section">
             <div className="carousel-header">
-                <span className="subtitle">MOMENTS</span>
-                <h2 className="title">Our Journey</h2>
+                <h2 className="title">Moments to Cherish</h2>
+                <br />
+                <span className="subtitle">A glimpse into our journey together</span>
+                <div className="gold-line"></div>
+
             </div>
 
             <div className="carousel-wrapper">

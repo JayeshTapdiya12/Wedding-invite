@@ -1,9 +1,10 @@
 .venue-section-gold {
-  background-color: rgb(197, 164, 109); /* Your specific Gold RGB */
+  background-color: rgb(197, 164, 109); /* Your Gold Background */
   padding: 100px 20px;
   display: flex;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .venue-container {
@@ -36,65 +37,94 @@
   flex-wrap: wrap;
 }
 
-.venue-card {
+/* Updated Luxe Card Styling */
+.venue-card-luxe {
   background-color: #ffffff;
-  padding: 40px 30px;
-  border-radius: 15px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; /* Slightly tighter curve like the image */
+  overflow: hidden; /* Ensures image curve matches border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left; /* Image alignment in reference is left */
 }
 
-.venue-illustration {
+/* Full Width Image Container */
+.venue-card-image {
   width: 100%;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 20px;
+  height: 250px; /* Fixed height for consistency */
+  position: relative;
 }
 
-.venue-illustration img {
-  max-width: 200px;
-  height: auto;
+.venue-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures photo frames properly */
+}
+
+/* Soft gradient overlay from reference */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Text Content Area */
+.venue-card-body {
+  padding: 30px 25px 40px; /* Specific padding from reference */
 }
 
 .venue-name {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
-  color: rgb(197, 164, 109); /* Matching text to the section background */
-  margin-bottom: 10px;
+  color: #1a1a1a; /* Darker black from reference */
+  margin: 0 0 10px;
+  line-height: 1.2;
 }
 
 .venue-date {
-  font-size: 1.1rem;
-  color: #333333;
-  margin-bottom: 15px;
-  font-weight: 500;
+  font-size: 0.75rem; /* Small date like reference */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6b2737; /* The specific maroon color from reference date */
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .venue-address {
-  font-size: 0.95rem;
-  color: #777777;
+  font-size: 0.9rem;
+  color: #757575; /* Soft grey from reference */
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
+/* Map Link Button styling from reference */
 .map-link-btn {
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: rgb(197, 164, 109); /* Match text to the gold section background */
   text-decoration: none;
-  border-bottom: 1px solid #333333;
-  padding-bottom: 4px;
-  font-weight: 600;
+  text-transform: uppercase;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
-.map-link-btn:hover {
+.map-icon {
+  font-size: 1rem;
   color: rgb(197, 164, 109);
-  border-color: rgb(197, 164, 109);
+  opacity: 0.7;
+}
+
+.map-link-btn:hover {
+  color: #6b2737; /* Change to date maroon on hover */
 }
 
 @media (max-width: 600px) {
@@ -104,7 +134,7 @@
   .venue-section-gold {
     padding: 60px 20px;
   }
-  .venue-card {
-    padding: 30px 20px;
+  .venue-card-body {
+    padding: 25px 20px 35px;
   }
 }

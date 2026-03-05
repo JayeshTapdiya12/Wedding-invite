@@ -1,206 +1,136 @@
-/* Container & Typography */
-.timeline-section {
+.schedule-section {
   background-color: #fdfaf5;
-  padding: 100px 20px;
-  font-family: "Playfair Display", serif;
-  overflow-x: hidden;
-}
-
-.main-title {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #b5935b;
-  font-style: italic;
-  margin-bottom: 60px;
-}
-
-.chapter-label {
-  text-align: center;
-  font-size: 0.9rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #555;
-  margin: 50px 0;
-}
-
-/* Timeline Spine */
-.timeline-spine-area {
+  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+  min-height: 100vh;
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.vertical-line-gold {
+.schedule-header {
+  text-align: center;
+  padding: 40px 20px;
+  flex-shrink: 0;
+}
+
+.schedule-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #3d3024;
+}
+
+/* DESKTOP HORIZONTAL LOGIC */
+.desktop-view {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 2rem; /* Using rem for relative spacing */
+  padding: 0 10vw;
+  will-change: transform;
+}
+
+/* FLUID CARD DESIGN */
+.function-card {
+  width: 28vw; /* Card gets smaller on smaller screens */
+  min-width: 320px; /* Won't get too tiny */
+  max-width: 440px; /* Won't get too huge */
+  height: 65vh; /* Fits perfectly vertically on laptops */
+  min-height: 500px;
+
+  border-radius: 24px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-bg-number {
   position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, #b5935b, transparent);
-  transform: translateX(-50%) scaleY(0);
-  transform-origin: top;
-  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 5%;
+  right: 5%;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-family: "Playfair Display", serif;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.card-img-container {
+  height: 38%; /* Proportional height */
+  width: 100%;
+  position: relative;
   z-index: 1;
 }
 
-/* Logic for drawing the line on scroll */
-.vertical-line-gold.reveal-visible {
-  transform: translateX(-50%) scaleY(1);
+.card-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Event Rows */
-.event-row-container {
-  position: relative;
-  width: 50%;
-  padding: 35px 0;
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.left-side {
-  left: 0;
-  text-align: right;
-  padding-right: 60px;
-  transform: translateX(-50px);
-}
-
-.right-side {
-  left: 50%;
-  text-align: left;
-  padding-left: 60px;
-  transform: translateX(50px);
-}
-
-/* Reveal State */
-.event-row-container.reveal-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Card Interaction */
-.event-text-mask {
-  display: inline-flex;
+.card-body {
+  padding: 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
   flex-direction: column;
-  background-color: #fdfaf5;
-  padding: 15px 25px;
-  border-radius: 8px;
-  transition: all 0.4s ease;
-  cursor: default;
+  justify-content: center;
+  z-index: 2;
 }
 
-.event-text-mask:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(181, 147, 91, 0.15);
-  background-color: #fff;
+.card-name {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.2;
+  margin: 10px 0;
 }
 
-.event-meta {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #b5935b;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.event-clock {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #222;
-  margin: 5px 0;
-}
-
-.event-heading {
-  font-size: 1rem;
-  color: #444;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-/* Decorative Dots */
-.line-dot {
-  position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #b5935b;
-  border-radius: 50%;
-  z-index: 3;
-  transform: translateY(-50%);
-  box-shadow: 0 0 0 0 rgba(181, 147, 91, 0.4);
-}
-
-.reveal-visible .line-dot {
-  animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(181, 147, 91, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(181, 147, 91, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(181, 147, 91, 0);
-  }
-}
-
-.left-side .line-dot {
-  right: -5px;
-}
-.right-side .line-dot {
-  left: -5px;
-}
-
-/* Separators & Icons */
-.gold-line {
-  width: 60px;
+.card-divider {
+  width: 40px;
   height: 1px;
-  background-color: #b5935b;
-  margin: 20px auto;
-  opacity: 0.5;
+  background-color: #d4a373;
+  margin: 1.5rem auto;
 }
 
-.gold-vase {
-  display: block;
-  margin: 40px auto;
-  width: 100px;
-  filter: sepia(0.3);
-  animation: float 4s ease-in-out infinite;
+/* PROGRESS BAR */
+.scroll-progress-container {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: rgba(181, 147, 91, 0.2);
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
+.scroll-progress-bar {
+  height: 100%;
+  background: #b5935b;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .vertical-line-gold {
-    left: 30px;
+/* MOBILE FALLBACK */
+@media (max-width: 1023px) {
+  .schedule-section {
+    overflow-y: auto;
+    display: block;
   }
-
-  .event-row-container {
+  .mobile-view .cards-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  .function-card {
     width: 100%;
-    left: 0 !important;
-    text-align: left !important;
-    padding-left: 60px !important;
-    padding-right: 0 !important;
-    transform: translateX(30px); /* Mobile slide from right */
-  }
-
-  .line-dot {
-    left: 25px !important;
-  }
-
-  .main-title {
-    font-size: 2.2rem;
+    height: auto;
+    min-height: 450px;
   }
 }

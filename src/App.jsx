@@ -1,70 +1,78 @@
 import { useState, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import CoupleReveal from "./components/CoupleReveal";
-import Flowers from "./components/Flowers";
-import Hero from "./components/Hero";
-import Schedule from "./components/Schedule";
-import Gallery from "./components/Gallery";
+// import Schedule from "./components/Schedule";
 import Venue from "./components/Venue";
-import RSVP from "./components/RSVP";
 import Invitation from "./components/Invitation";
-import CountDown from "./components/CountDown";
-import './App.css';
-import WelcomeSection from "./components/WelcomeSection";
-import ImageCarousel from "./components/ImageCarousel";
+// import CountDown from "./components/CountDown";
+// import WelcomeSection from "./components/WelcomeSection";
+// import ImageCarousel from "./components/ImageCarousel";
 import ExploreSection from "./components/ExploreSection";
 import DressCodeSection from "./components/DressCodeSection";
-
+import Gallery from "./components/Gallery";
+import Navbar from './components/NavBar';
+import './App.css';
+import Home from "./components/Home";
+import Travelling from "./components/Travelling";
+import Schedule from "./components/Schedule";
 
 function App() {
   const [stage, setStage] = useState("envelope");
   const audioRef = useRef(null);
 
-  // const startExperience = () => {
-  //   audioRef.current.play().catch(err => {
-  //     console.log("Autoplay blocked:", err);
-  //   });
-  //   setStage("reveal");
-  // };
   const startExperience = () => {
     audioRef.current.play().catch(err => console.log(err));
     setStage("reveal");
   };
 
+
   return (
-    <>
+    <Router>
       <audio ref={audioRef} loop>
         <source src="/music.mp3" type="audio/mpeg" />
       </audio>
 
+      {/* Stage 1: The Invitation Envelope */}
       {stage === "envelope" && (
         <Invitation onOpen={startExperience} />
       )}
 
+      {/* Stage 2: The Main Application (After Open) */}
       {stage === "reveal" && (
-        <>
-          <CoupleReveal onComplete={() => setStage("main")} />
-          <CountDown />
-          <WelcomeSection />
-          <ImageCarousel />
-          <Venue />
-          <Schedule />
-          <ExploreSection />
-          <DressCodeSection />
-          {/* <RSVP /> */}
-          <ImageCarousel />
+        <div className="app-main-layout">
+          <Navbar />
 
-        </>
+          <Routes>
+            {/* Home Route: Landing view with Hero and Reveal */}
+            <Route path="/" element={
+              <>
+                <CoupleReveal />
+                {/*<CountDown />
+                <WelcomeSection />
+                <ImageCarousel />
+                <Schedule />
+                <DressCodeSection />
+                <Venue />
+                <ExploreSection /> */}
+                <Home />
+              </>
+            } />
+
+
+            {/* Fallback to Home */}
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/venue" element={<Venue />} />
+            <Route path="/wardrobe" element={<DressCodeSection />} />
+            <Route path="/explore" element={<ExploreSection />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/guide" element={<Travelling />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+
+          {/* Persistent Footer Carousel (Optional) */}
+        </div>
       )}
-
-      {stage === "main" && (
-        <>
-
-          <Flowers />
-          <Hero />
-          <Gallery />
-        </>
-      )}
-    </>
+    </Router>
   );
 }
 

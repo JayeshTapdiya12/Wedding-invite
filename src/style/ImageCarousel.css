@@ -113,8 +113,8 @@
 }
 
 .gold-line {
-  width: 80px;
-  height: 1px;
+  width: 100px;
+  height: 2px;
   background-color: #b88c46;
-  opacity: 0.6;
+  opacity: 0.8;
 }

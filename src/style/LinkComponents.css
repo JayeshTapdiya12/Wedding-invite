@@ -1,0 +1,107 @@
+.links-section {
+  padding: 100px 5%;
+  background-color: #fddda9;
+  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+}
+
+.links-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  color: #b5935b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #3d3024;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.link-card {
+  text-decoration: none;
+  display: block;
+  background: white;
+  padding: 40px 30px;
+  height: 100%;
+  border: 1px solid rgba(181, 147, 91, 0.2);
+  position: relative;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.link-card:hover {
+  border-color: #b5935b;
+  box-shadow: 0 20px 40px rgba(181, 147, 91, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.card-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b6f6f;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #3d3024;
+  margin: 10px 0 15px 0;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #b5935b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-footer svg {
+  transition: transform 0.3s ease;
+}
+
+.link-card:hover .card-footer svg {
+  transform: translateX(8px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .links-section {
+    padding: 60px 20px;
+  }
+  .main-title {
+    font-size: 2.2rem;
+  }
+}
