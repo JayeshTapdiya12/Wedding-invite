@@ -33,7 +33,7 @@ const CountDown = () => {
         <section className="countdown-section">
             <div className="countdown-container reveal-fade-up">
                 <h2 className="countdown-title">Countdown</h2>
-                <p className="countdown-subtitle">27 - 31 MARCH 2026</p>
+                <h6 className="label">27 - 31 MARCH 2026</h6>
 
                 <div className="countdown-grid">
                     <div className="time-box">
