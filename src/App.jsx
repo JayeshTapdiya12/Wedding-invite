@@ -17,11 +17,16 @@ import Travelling from "./components/Travelling";
 import Schedule from "./components/Schedule";
 
 function App() {
-  const [stage, setStage] = useState("envelope");
+  const [stage, setStage] = useState(() => {
+    return window.location.pathname !== "/" ? "reveal" : "envelope";
+  });
+
   const audioRef = useRef(null);
 
   const startExperience = () => {
-    audioRef.current.play().catch(err => console.log(err));
+    if (audioRef.current) {
+      audioRef.current.play().catch(err => console.log("Audio play blocked:", err));
+    }
     setStage("reveal");
   };
 
