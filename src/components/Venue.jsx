@@ -6,14 +6,14 @@ import '../style/Venue.css';
 const venues = [
     {
         name: "Glory By Shrida",
-        date: "27 March 2026",
+        date: "27 - 28 March 2026",
         address: "CAT Road, Indore, Madhya Pradesh",
         image: "https://media.weddingz.in/photologue/images/shrida-greens-lawns-and-resort-rajendra-nagar-indore.png", // Full width photo
         mapLink: "https://maps.google.com/?q=Glory+by+Shridha,+CAT+Road,+IndoreThe"
     },
     {
         name: "The Westin Pushkar",
-        date: "30 March 2026",
+        date: "30 - 31 March 2026",
         address: "Khasra No. 1242, 1243, 1196, Pushkar, Rajasthan",
         image: "https://www.hotelscombined.com/himg/7d/51/fa/leonardo-2655516-840117-243056.jpg", // Full width photo
         mapLink: "https://maps.google.com/?q=The+Westin+Pushkar+Resort+%26+Spa,+Pushkar,+Rajasthan,+India"
