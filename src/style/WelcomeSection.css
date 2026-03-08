@@ -1,168 +1,108 @@
-.welcome-light-section {
-  background-color: #f4c77e;
-  background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-  padding: 100px 20px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.welcome-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Header Styling */
-.marrying-tag {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #3d3024;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.celebrate-with-us {
-  font-family: "Inter", sans-serif;
-  color: #8b6f6f;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.9rem;
-}
-
-/* Story Card */
-.story-card {
-  background-color: #fdfaf5;
-  padding: 50px 30px;
-  margin: 50px 0;
-  border-radius: 2px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  position: relative;
-  border: 1px solid rgba(212, 163, 115, 0.2);
-}
-
-.narrative-text {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  line-height: 1.8;
-  color: #3d3024;
-}
-
-.italic-sub {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #8b6f6f;
-}
-
-.divider-diamond {
-  width: 40px;
-  height: 1px;
-  background: #d4a373;
-  margin: 30px auto;
-  position: relative;
-}
-
-.highlight-text {
-  color: #d4a373;
-  font-weight: 600;
-}
-
-/* Vow Box */
-.vow-box {
-  margin: 60px 0;
-}
-
-.choosing-each-other {
-  font-size: 1.2rem;
-  color: #8b6f6f;
-}
-
-.always-text {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  color: #3d3024;
-  margin-top: 15px;
-  letter-spacing: 4px;
-}
-
-/* Location Call */
-.location-call {
-  font-size: 1.5rem;
-  font-family: "Playfair Display", serif;
-  color: #3d3024;
-  line-height: 1.5;
-}
-
-.now-time {
-  color: #d4a373;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* Final Instruction */
-.instruction-row {
+/* Container for the whole section */
+.welcome-outer-wrapper {
+  background: linear-gradient(135deg, #4a1a28 0%, #2d0f18 100%);
+  padding: 120px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #3d3024;
-  text-transform: uppercase;
-  font-size: 0.85rem;
+  min-height: 80vh;
 }
 
-.dot {
-  width: 5px;
-  height: 5px;
-  background: #d4a373;
-  border-radius: 50%;
+/* The "Card" Look */
+.welcome-card-premium {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  background: rgba(255, 255, 255, 0.03); /* Extremely subtle white tint */
+  border: 1px solid rgba(201, 169, 110, 0.3); /* Thin gold border */
+  position: relative;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Footer Divider */
-.gold-line {
-  width: 100px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #d4a373, transparent);
-  margin: 20px auto;
+/* Centered Ornaments */
+.card-ornament {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c9a96e;
+  font-size: 1.5rem;
+  background: #3a1520; /* Matches BG to "break" the border */
+  padding: 0 15px;
+}
+.top-ornament {
+  top: -18px;
+}
+.bottom-ornament {
+  bottom: -18px;
 }
 
-.final-call {
+/* Typography */
+.note-title {
   font-family: "Playfair Display", serif;
-  font-size: 1.3rem;
-  color: #3d3024;
+  font-size: 2.8rem;
+  color: #fff8f0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-/* Animation Classes */
-.reveal {
-  opacity: 0;
-  transition: all 0.8s ease-out;
+.note-body {
+  font-family: "Lora", serif; /* Highly readable serif */
+  color: rgba(255, 248, 240, 0.85);
+  font-size: 1.15rem;
+  line-height: 2; /* Increased for readability */
+  max-width: 550px;
+  margin: 0 auto;
 }
 
-.fade-up {
-  transform: translateY(30px);
-}
-.fade-down {
-  transform: translateY(-30px);
-}
-
-.animate-in {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
+.greeting {
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff8f0;
+  font-size: 1.2rem;
 }
 
-.delay-1 {
-  transition-delay: 0.2s;
+.note-body p {
+  margin-bottom: 25px;
 }
-.delay-2 {
-  transition-delay: 0.4s;
+
+.pushkar-sky {
+  font-style: italic;
+  color: #c9a96e;
+  margin-top: 30px;
 }
-.delay-3 {
-  transition-delay: 0.6s;
+
+/* Signature Section */
+.note-signature {
+  margin-top: 50px;
 }
-.delay-4 {
-  transition-delay: 0.8s;
+
+.with-love {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: rgba(255, 248, 240, 0.6);
+  margin-bottom: 10px;
 }
-.delay-5 {
-  transition-delay: 1s;
+
+.couple-names {
+  font-family: "Great Vibes", cursive; /* Professional Script */
+  font-size: 3rem;
+  color: #c9a96e;
+  font-weight: 400;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .welcome-card-premium {
+    padding: 50px 25px;
+    margin: 0 15px;
+  }
+  .note-title {
+    font-size: 2rem;
+  }
+  .note-body {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
 }
