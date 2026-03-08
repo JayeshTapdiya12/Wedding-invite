@@ -44,7 +44,7 @@
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: #d4a373;
   margin-bottom: 15px;
 }
@@ -59,7 +59,7 @@
 /* --- ADDED LIGHTING ANIMATION HERE --- */
 .couple-name {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.1;
   font-style: italic;
   font-weight: 400;

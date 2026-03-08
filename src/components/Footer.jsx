@@ -23,13 +23,13 @@ const Footer = () => {
                 {/* Monogram Section */}
                 <div className="monogram-wrapper">
                     <span className="m-letter">P</span>
-                    {/* <div className="m-divider"></div> */}
-                    {/* <div className="heart-pulse-container">
-                        <div className="pulse-ring"></div>
-                        <svg className="footer-heart" width="24" height="24" viewBox="0 0 32 32">
-                            <path d="M16 28.722c-0.294 0-0.587-0.094-0.831-0.278-2.644-2.003-5.144-3.997-7.069-5.719-2.419-2.166-3.85-4.384-4.375-6.791-0.537-2.463-0.178-4.966 1.009-7.050 1.216-2.134 3.228-3.506 5.666-3.862 1.725-0.253 3.497 0.084 4.978 0.947 0.422 0.247 0.816 0.534 1.178 0.856 0.362-0.322 0.756-0.609 1.178-0.856 1.481-0.863 3.253-1.2 4.978-0.947 2.438 0.356 4.45 1.728 5.666 3.862 1.188 2.084 1.547 4.588 1.009 7.050-0.525 2.406-1.956 4.625-4.375 6.791-1.925 1.722-4.425 3.716-7.069 5.719-0.244 0.184-0.537 0.278-0.831 0.278z" />
-                        </svg>
-                    </div> */}
+
+                    {/* Logo inserted between P and S */}
+                    <img
+                        src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/logo_wvouwk.png"
+                        alt="Wedding Logo"
+                        className="footer-mid-logo"
+                    />
 
                     <span className="m-letter">S</span>
                 </div>
@@ -46,7 +46,6 @@ const Footer = () => {
                         <span className="detail-label">Where</span>
                         <p className="detail-value">Glory By Shreeda, Indore</p>
                         <p className="detail-value">The Westin Pushkar Resort & Spa, Pushkar</p>
-
                     </div>
                     <div className="detail-separator" />
                     <div className="detail-item">
@@ -55,8 +54,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-
-
                 {/* Bottom Credits */}
                 <div className="footer-bottom">
                     <div className="gold-line-dim" />
@@ -64,9 +61,6 @@ const Footer = () => {
                     <p className="credits-text">By</p>
                     <p className="credits-text">Hiteshi Mirchandani</p>
                     <p className="credits-text">Jayesh Tapdiya</p>
-
-
-
 
                     <div className="heart-pulse-container">
                         <div className="pulse-ring"></div>

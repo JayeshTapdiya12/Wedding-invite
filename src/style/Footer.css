@@ -5,6 +5,7 @@
   color: #fff8f0;
   text-align: center;
   overflow: hidden;
+  font-family: "Playfair Display", serif;
 }
 
 .footer-texture {
@@ -184,4 +185,20 @@
     flex-wrap: wrap;
     gap: 15px;
   }
+}
+.footer-mid-logo {
+  height: 60px; /* Adjust this to match the height of your P and S */
+  width: auto;
+  object-fit: contain;
+  /* Optional: Slight shadow to make the logo pop against the dark red */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Ensure the wrapper keeps them perfectly centered vertically */
+.monogram-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }

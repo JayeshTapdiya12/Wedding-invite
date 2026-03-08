@@ -19,6 +19,13 @@
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: #3d3024;
+  margin-bottom: 10px;
+}
+
+.schedule-desc {
+  font-family: "Lora", serif;
+  font-style: italic;
+  color: #8b6f6f;
 }
 
 /* DESKTOP HORIZONTAL LOGIC */
@@ -30,19 +37,18 @@
 
 .cards-wrapper {
   display: flex;
-  gap: 2rem; /* Using rem for relative spacing */
+  gap: 2rem;
   padding: 0 10vw;
   will-change: transform;
 }
 
-/* FLUID CARD DESIGN */
+/* CARD DESIGN */
 .function-card {
-  width: 28vw; /* Card gets smaller on smaller screens */
-  min-width: 320px; /* Won't get too tiny */
-  max-width: 440px; /* Won't get too huge */
-  height: 65vh; /* Fits perfectly vertically on laptops */
-  min-height: 500px;
-
+  width: 28vw;
+  min-width: 320px;
+  max-width: 440px;
+  height: 68vh;
+  min-height: 520px;
   border-radius: 24px;
   flex-shrink: 0;
   position: relative;
@@ -50,6 +56,7 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .card-bg-number {
@@ -58,12 +65,12 @@
   right: 5%;
   font-size: clamp(4rem, 8vw, 7rem);
   font-family: "Playfair Display", serif;
-  opacity: 0.08;
+  opacity: 0.12;
   z-index: 0;
 }
 
 .card-img-container {
-  height: 38%; /* Proportional height */
+  height: 40%;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -82,14 +89,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 2;
+}
+
+.card-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .card-name {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   line-height: 1.2;
-  margin: 10px 0;
+  margin: 12px 0;
+}
+
+.card-info-row {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
 }
 
 .card-divider {
@@ -97,6 +117,93 @@
   height: 1px;
   background-color: #d4a373;
   margin: 1.5rem auto;
+}
+
+.card-theme {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* STYLE GUIDE BUTTON */
+.style-guide-button {
+  background: transparent;
+  border: 1px solid;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: "Lora", serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.style-guide-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* MODAL STYLES */
+.style-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.style-modal-content {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: modalScale 0.4s ease-out;
+}
+
+@keyframes modalScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.style-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.style-guide-full-img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: cover;
+}
+
+.style-modal-label {
+  padding: 20px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #3d3024;
 }
 
 /* PROGRESS BAR */
@@ -117,7 +224,7 @@
   transform: scaleX(0);
 }
 
-/* MOBILE FALLBACK */
+/* MOBILE VIEW */
 @media (max-width: 1023px) {
   .schedule-section {
     overflow-y: auto;
@@ -130,7 +237,8 @@
   }
   .function-card {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    min-height: 450px;
+    min-height: 500px;
   }
 }

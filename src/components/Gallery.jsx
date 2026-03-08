@@ -6,12 +6,36 @@ const Gallery = () => {
     const [selectedImg, setSelectedImg] = useState(null);
 
     const images = [
-        { id: 1, url: '/img1.jpeg', title: 'The First Chapter' },
-        { id: 2, url: '/img2.jpeg', title: 'Golden Hours' },
-        { id: 3, url: '/img3.jpeg', title: 'Sweet Whispers' },
-        { id: 4, url: '/img4.jpeg', title: 'Better Together' },
-        { id: 5, url: '/img5.jpeg', title: 'Hand in Hand' },
-        { id: 6, url: '/img6.jpeg', title: 'Our Forever' },
+        {
+            id: 1,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954264/img1_vixx3s.jpg",
+            title: 'The First Chapter'
+        },
+        {
+            id: 2,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954261/img2_mc93cp.jpg",
+            title: 'Golden Hours'
+        },
+        {
+            id: 3,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img3_qwfuhh.jpg",
+            title: 'Sweet Whispers'
+        },
+        {
+            id: 4,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg",
+            title: 'Better Together'
+        },
+        {
+            id: 5,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img5_wmuklh.jpg",
+            title: 'Hand in Hand'
+        },
+        {
+            id: 6,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img6_texq08.jpg",
+            title: 'Our Forever'
+        },
     ];
 
     return (

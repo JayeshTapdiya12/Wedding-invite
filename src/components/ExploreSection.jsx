@@ -8,50 +8,50 @@ const ExploreSection = () => {
             city: "Indore",
             title: "Rajwada Palace",
             desc: "The heartbeat of Indore, this seven-story palace features a blend of Maratha and Mughal architecture.",
-            img: "/rajwada.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955162/rajwada_byrxyq.png"
         },
         {
             city: "Indore",
             title: "Sarafa Bazaar",
             desc: "A jewelry market by day that transforms into a legendary night street food paradise after 9 PM.",
-            img: "/sarafa.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955753/images_dxrov5.jpg"
         },
         {
             city: "Indore",
             title: "56 Dukaan",
             desc: "A famous cluster of 56 shops offering the best of Indore's culinary delights and chaat.",
-            img: "/56dukaan.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955192/56dukaan_jaftue.png"
         },
         {
             city: "Indore",
             title: "Lal Bagh Palace",
             desc: "One of the grandest monuments of the Holkar dynasty, reflecting a truly European lifestyle.",
-            img: "/lalbagh.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955717/lalbagh_dhynuh.png"
         },
         // PUSHKAR PLACES
         {
             city: "Pushkar",
             title: "Pushkar Lake",
             desc: "A sacred oasis surrounded by 52 bathing ghats, offering a spiritual and serene atmosphere.",
-            img: "/pushkar-lake.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955631/pushkar-lake_zrugk7.png"
         },
         {
             city: "Pushkar",
             title: "Brahma Temple",
             desc: "The only significant temple in the world dedicated to Lord Brahma, dating back to the 14th century.",
-            img: "/brahma_temple.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955295/brahma_temple_qmgosx.png"
         },
         {
             city: "Pushkar",
             title: "Pushkar Local Market",
             desc: "A vibrant maze of shops selling silver jewelry, colorful textiles, and traditional Rajasthani crafts.",
-            img: "/pushkar_market.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955163/pushkar_market_rbbf4j.png"
         },
         {
             city: "Pushkar",
             title: "Desert Safari",
             desc: "Experience the rustic charm of Rajasthan with a camel or jeep safari through the golden sand dunes.",
-            img: "/desert_safari.png"
+            img: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955680/desert_safari_gnphzg.png"
         }
     ];
 

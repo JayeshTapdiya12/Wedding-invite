@@ -3,18 +3,15 @@ import '../style/ImageCarousel.css';
 
 const ImageCarousel = () => {
     const images = [
-        "./img1.jpeg",
-        "./img2.jpeg",
-        "./img3.jpeg",
-        "./img4.jpeg",
-        "./img5.jpeg",
-        "./img6.jpeg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954264/img1_vixx3s.jpg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img6_texq08.jpg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img3_qwfuhh.jpg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954261/img2_mc93cp.jpg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg",
+        "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img5_wmuklh.jpg",
 
 
-        // "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
-        // "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000",
-        // "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000",
-        // "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1000"
+
     ];
 
     const loopImages = [...images, ...images];
@@ -46,7 +43,7 @@ const ImageCarousel = () => {
             <div className="gold-line"></div>
 
             <div className="decorative-divider">
-                <img src="/flask.png" alt="Decorative Vase" className="flask-image" />
+                <img src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/flask_su3hrm.png" alt="Decorative Vase" className="flask-image" />
             </div>
         </section>
     );

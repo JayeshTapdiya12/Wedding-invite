@@ -35,7 +35,7 @@ const NavBar = () => {
         <nav className={`wedding-navbar ${visible ? "nav-visible" : "nav-hidden"}`}>
             <div className="nav-logo">
                 <Link to="/" className={isActive("/")} onClick={closeMenu}>
-                    <img src="/logo.png" alt="Logo" className="logo-img" />
+                    <img src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/logo_wvouwk.png" alt="Logo" className="logo-img" />
 
                 </Link>
             </div>

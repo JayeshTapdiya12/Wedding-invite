@@ -13,7 +13,7 @@ const CoupleReveal = () => {
         <div className="page-wrapper">
             {/* Background Image Layer with Ken Burns Zoom Effect */}
             <div className={`bg-hero ${animate ? 'zoom-active' : ''}`}>
-                <img src="./coverimg.jpeg" alt="Couple" className="hero-image" />
+                <img src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955162/coverimg_xdalyl.jpg" alt="Couple" className="hero-image" />
                 <div className="overlay-vignette"></div>
             </div>
 

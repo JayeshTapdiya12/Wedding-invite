@@ -35,12 +35,12 @@ const Invitation = ({ onOpen }) => {
 
             <br />
             <div className="wax-seal" onClick={handleOpen}>
-                <img src="/logo.png" alt="Seal Logo" className="seal-logo" />
+                <img src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/logo_wvouwk.png" alt="Seal Logo" className="seal-logo" />
             </div>
 
             <br />
             <div className="exclusive-text">
-                अतिथि देवो भवः
+                P.S.iloveyou
             </div>
         </div>
     );
