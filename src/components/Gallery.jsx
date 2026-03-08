@@ -6,37 +6,16 @@ const Gallery = () => {
     const [selectedImg, setSelectedImg] = useState(null);
 
     const images = [
-        {
-            id: 1,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954264/img1_vixx3s.jpg",
-            title: 'The First Chapter'
-        },
-        {
-            id: 2,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954261/img2_mc93cp.jpg",
-            title: 'Golden Hours'
-        },
-        {
-            id: 3,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img3_qwfuhh.jpg",
-            title: 'Sweet Whispers'
-        },
-
-        {
-            id: 5,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img5_wmuklh.jpg",
-            title: 'Hand in Hand'
-        },
-        {
-            id: 4,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg",
-            title: 'Better Together'
-        },
-        {
-            id: 6,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img6_texq08.jpg",
-            title: 'Our Forever'
-        },
+        { id: 1, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954264/img1_vixx3s.jpg", title: 'The First Chapter' },
+        { id: 2, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954261/img2_mc93cp.jpg", title: 'Golden Hours' },
+        { id: 3, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img3_qwfuhh.jpg", title: 'Sweet Whispers' },
+        { id: 4, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img5_wmuklh.jpg", title: 'Hand in Hand' },
+        { id: 5, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg", title: 'Better Together' },
+        { id: 6, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img6_texq08.jpg", title: 'Our Forever' },
+        { id: 7, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772968748/IMG_3564_1_r8axhm.png", title: 'Cherished Moments' },
+        { id: 8, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772968746/IMG_1631.JPG_1_y9agti.jpg", title: 'Joyous Smiles' },
+        { id: 9, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772968747/IMG_3890.JPG_1_mk5ko5.jpg", title: 'Elegant Details' },
+        { id: 11, url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772968745/IMG_2940.JPG_1_mz30qt.jpg", title: 'Together Always' },
     ];
 
     return (

@@ -8,6 +8,7 @@ import ExploreSection from "./ExploreSection";
 import DressCodeSection from "./DressCodeSection";
 import Footer from "./Footer";
 import LinkComponents from "./LinkCompoments";
+import Blessing from "./Blessing";
 
 function Home() {
 
@@ -22,6 +23,7 @@ function Home() {
             <Venue />
 
             <Schedule />
+            <Blessing />
             <LinkComponents />
             {/* <DressCodeSection /> */}
             {/* <ExploreSection /> */}
