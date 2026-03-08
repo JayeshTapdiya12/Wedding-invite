@@ -66,7 +66,9 @@ function App() {
             <Route path="/explore" element={<ExploreSection />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/guide" element={<Travelling />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<>
+              <CoupleReveal />
+              <Home /></>} />
           </Routes>
 
           {/* Persistent Footer Carousel (Optional) */}
