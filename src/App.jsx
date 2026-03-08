@@ -16,6 +16,7 @@ import Home from "./components/Home";
 import Travelling from "./components/Travelling";
 import Schedule from "./components/Schedule";
 import ScrollToTop from "./components/ScrollToTop";
+import Blessings from "./components/Blessing";
 function App() {
   const [stage, setStage] = useState(() => {
     return window.location.pathname !== "/" ? "reveal" : "envelope";
@@ -72,6 +73,7 @@ function App() {
             <Route path="/explore" element={<ExploreSection />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/guide" element={<Travelling />} />
+            <Route path="/blessing" element={<Blessings />} />
             <Route path="*" element={<>
               <CoupleReveal />
               <Home /></>} />

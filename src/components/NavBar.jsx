@@ -58,6 +58,7 @@ const NavBar = () => {
                 <li><Link to="/explore" className={isActive("/explore")} onClick={closeMenu}>Explore The Cities</Link></li>
                 <li><Link to="/guide" className={isActive("/guide")} onClick={closeMenu}>Travelling Guide</Link></li>
                 <li><Link to="/gallery" className={isActive("/gallery")} onClick={closeMenu}>Gallery</Link></li>
+                <li><Link to="/blessing" className={isActive("/blessing")} onClick={closeMenu}>Blessings</Link></li>
 
 
             </ul>

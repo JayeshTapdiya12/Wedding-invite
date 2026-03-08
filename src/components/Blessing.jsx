@@ -10,105 +10,85 @@ const Blessings = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs
-            .sendForm(
-                "service_4f3c1np",      // your service ID
-                "template_imep6uh",     // your template ID
-                form.current,
-                "JAkhCVod6Y6D-pSRz"     // your public key
-            )
+            .sendForm("service_4f3c1np", "template_imep6uh", form.current, "JAkhCVod6Y6D-pSRz")
             .then(() => {
                 setSubmitted(true);
                 setShowHearts(true);
-
                 setTimeout(() => {
                     setSubmitted(false);
                     setShowHearts(false);
                 }, 3000);
-
                 form.current.reset();
             })
             .catch((error) => {
                 console.error("EmailJS Error:", error);
-                alert("Failed to send, please try again.");
             });
     };
 
     return (
         <section className="blessings-section">
-            <div className="blessings-container">
+            <div className="blessings-overlay"></div>
 
+            <div className="blessings-container">
                 <motion.div
-                    className="text-center mb-16"
-                    initial={{ opacity: 0, y: 40 }}
+                    className="blessings-header"
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
                 >
-                    <h2 className="title">Send Your Blessings</h2>
-                    <div className="divider"></div>
+                    <span className="script-accent">With Love</span>
+                    <h2 className="blessings-title">Send Your Blessings</h2>
+                    <div className="blessings-gold-line"></div>
                 </motion.div>
 
-                <form ref={form} onSubmit={sendEmail} className="blessings-form">
+                <motion.div
+                    className="blessings-card-wrapper"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                >
+                    <form ref={form} onSubmit={sendEmail} className="blessings-glass-card">
+                        <div className="input-group">
+                            <label>Your Name</label>
+                            <input type="text" name="user_name" placeholder="Enter your name" required />
+                        </div>
 
-                    <input
-                        type="text"
-                        name="user_name"
-                        placeholder="Your Name"
-                        required
-                    />
+                        <div className="input-group">
+                            <label>Your Message</label>
+                            <textarea name="message" placeholder="Write your wishes here..." rows={5} required />
+                        </div>
 
-                    <input
-                        type="email"
-                        name="user_email"
-                        placeholder="Your Email"
-                        required
-                    />
-
-                    <textarea
-                        name="message"
-                        placeholder="Your wishes and blessings..."
-                        rows={4}
-                        required
-                    />
-
-                    <button
-                        type="submit"
-                        disabled={submitted}
-                        className={submitted ? "sent" : ""}
-                    >
-                        {submitted ? "Thank you for your blessings!" : "Send Wishes"}
-                    </button>
-
-                </form>
+                        <button type="submit" disabled={submitted} className={submitted ? "btn-sent" : "btn-submit"}>
+                            {submitted ? "Blessings Sent Successfully" : "Send Wishes"}
+                        </button>
+                    </form>
+                </motion.div>
 
                 <AnimatePresence>
                     {showHearts && (
-                        <motion.div
-                            className="heart-burst"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                        >
-                            {[...Array(8)].map((_, i) => (
+                        <div className="heart-burst-container">
+                            {[...Array(15)].map((_, i) => (
                                 <motion.div
                                     key={i}
-                                    className="heart"
-                                    initial={{ y: 0, opacity: 1 }}
+                                    className="floating-heart"
+                                    initial={{ y: 0, x: 0, opacity: 1, scale: 0.5 }}
                                     animate={{
-                                        y: -120,
+                                        y: -400,
+                                        x: (Math.random() - 0.5) * 300,
                                         opacity: 0,
-                                        x: (Math.random() - 0.5) * 100,
+                                        scale: 2,
+                                        rotate: (Math.random() - 0.5) * 90
                                     }}
-                                    transition={{ duration: 2 }}
+                                    transition={{ duration: 2.5, ease: "easeOut" }}
                                 >
                                     ❤
                                 </motion.div>
                             ))}
-                        </motion.div>
+                        </div>
                     )}
                 </AnimatePresence>
-
             </div>
         </section>
     );
