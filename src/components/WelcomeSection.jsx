@@ -17,28 +17,42 @@ const WelcomeSection = () => {
                     <div className="card-ornament top-ornament">✦</div>
 
                     <div className="welcome-content-inner">
-                        <h2 className="note-title">A Note From Us</h2>
+                        <h2 className="note-title announcement">WE’RE GETTING MARRIED!!</h2>
 
                         <div className="note-body">
-                            <p className="greeting">To our beloved family and friends,</p>
+                            <p className="greeting">And we’d love for you to celebrate it with us.</p>
 
                             <p>
-                                Every love story has a chapter that changes everything — and ours began with a
-                                friendship that neither of us expected, grew into something neither of us could ignore,
-                                and is now becoming a forever we can't wait to celebrate.
+                                Two families met. Conversations happened. <br />
+                                <i>Horoscopes probably approved.</i>
                             </p>
 
                             <p>
-                                From Indore to Pushkar, from late-night conversations to early-morning chai, every
-                                moment has led us here — to this celebration, with you.
+                                And somewhere between “formal introductions” and a few “coffee
+                                conversations”, a forever quietly took shape.
                             </p>
+
+                            <p className="text-italic">No dramatic twists. No long speeches.</p>
+
+                            <p className="text-highlight">
+                                Just two people, choosing each other — <br />
+                                <strong>TODAY, TOMORROW, ALWAYS.</strong>
+                            </p>
+
+                            <p>Now it’s time to celebrate!</p>
 
                             <p>
-                                We don't just want you at our wedding. We want you in this chapter, dancing with us,
-                                laughing with us, and making memories that we'll hold close for the rest of our lives.
+                                Join us in Indore, celebrate with us under the <br />
+                                <span className="text-gold">open skies of Pushkar!</span>
                             </p>
 
-                            <p className="pushkar-sky">See you under the Pushkar sky.</p>
+                            <div className="call-to-action">
+                                <p>Clear your calendar.</p>
+                                <p>Cancel your excuses.</p>
+                                <p className="final-note">
+                                    Your presence isn’t optional — <strong>it’s part of the celebration!</strong>
+                                </p>
+                            </div>
                         </div>
 
                         <div className="note-signature">
