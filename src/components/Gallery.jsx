@@ -21,15 +21,16 @@ const Gallery = () => {
             url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954260/img3_qwfuhh.jpg",
             title: 'Sweet Whispers'
         },
-        {
-            id: 4,
-            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg",
-            title: 'Better Together'
-        },
+
         {
             id: 5,
             url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img5_wmuklh.jpg",
             title: 'Hand in Hand'
+        },
+        {
+            id: 4,
+            url: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954259/img4_bfupnh.jpg",
+            title: 'Better Together'
         },
         {
             id: 6,

@@ -15,7 +15,7 @@ import './App.css';
 import Home from "./components/Home";
 import Travelling from "./components/Travelling";
 import Schedule from "./components/Schedule";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   const [stage, setStage] = useState(() => {
     return window.location.pathname !== "/" ? "reveal" : "envelope";
@@ -33,6 +33,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <audio ref={audioRef} loop>
         <source src="/music.mp3" type="audio/mpeg" />
       </audio>
