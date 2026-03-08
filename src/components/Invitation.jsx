@@ -40,7 +40,7 @@ const Invitation = ({ onOpen }) => {
 
             <br />
             <div className="exclusive-text">
-                P.S.iloveyou
+                #P.S.iloveyou
             </div>
         </div>
     );

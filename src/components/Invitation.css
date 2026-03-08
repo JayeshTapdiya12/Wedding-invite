@@ -75,8 +75,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(140px, 35vw, 190px);
-  height: clamp(140px, 35vw, 190px);
+  width: clamp(180px, 37vw, 210px);
+  height: clamp(180px, 37vw, 210px);
   /* background-color: #c7ffd8; */
   border: 3px solid var(--royal-gold);
   border-radius: 50%;
@@ -108,7 +108,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  font-family: "Kalam", cursive;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 700;
   color: var(--royal-gold);

@@ -23,7 +23,7 @@ const navItems = [
         subtitle: "Travelling & Stay",
         path: "/guide",
         icon: "✈️",
-        description: "Everything you need to know about reaching Pushkar & Indore."
+        description: "Everything you need to know about reaching Pushkar ."
     },
     {
         title: "The Moments",

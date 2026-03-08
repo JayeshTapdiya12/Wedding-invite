@@ -20,13 +20,11 @@ const Footer = () => {
 
                 {/* Monogram Section */}
                 <div className="monogram-wrapper">
-                    <span className="m-letter">P</span>
                     <img
                         src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/logo_wvouwk.png"
                         alt="Wedding Logo"
                         className="footer-mid-logo"
                     />
-                    <span className="m-letter">S</span>
                 </div>
 
                 {/* Names & Hashtag */}
@@ -39,13 +37,13 @@ const Footer = () => {
                 <div className="footer-details">
                     <div className="detail-item">
                         <span className="detail-label">Where</span>
-                        <p className="detail-value">Glory By Shreeda, Indore</p>
-                        <p className="detail-value">The Westin Pushkar Resort & Spa, Pushkar</p>
+                        <p className="credits-text">Glory By Shrida, Indore</p>
+                        <p className="credits-text">The Westin, Resort & Spa, Pushkar</p>
                     </div>
                     <div className="detail-separator" />
                     <div className="detail-item">
                         <span className="detail-label">When</span>
-                        <p className="detail-value">March 27 — 31, 2026</p>
+                        <p className="credits-text">March 27 — 31, 2026</p>
                     </div>
                 </div>
 
@@ -54,11 +52,11 @@ const Footer = () => {
                     <div className="gold-line-dim" />
 
                     <button onClick={scrollToTop} className="back-to-top">
-                        Back to Top ↑
+                        Back to Top
                     </button>
 
                     <p className="credits-text">Crafted with love for our special guests</p>
-                    <p className="credits-names">Hiteshi Mirchandani & Jayesh Tapdiya</p>
+                    <p className="credits-text">Hiteshi Mirchandani & Jayesh Tapdiya</p>
 
                     <div className="heart-pulse-container">
                         <div className="pulse-ring"></div>

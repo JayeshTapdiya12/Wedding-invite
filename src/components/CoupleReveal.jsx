@@ -13,7 +13,7 @@ const CoupleReveal = () => {
         <div className="page-wrapper">
             {/* Background Image Layer with Ken Burns Zoom Effect */}
             <div className={`bg-hero ${animate ? 'zoom-active' : ''}`}>
-                <img src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955162/coverimg_xdalyl.jpg" alt="Couple" className="hero-image" />
+                <img src="./coverimg.jpeg" alt="Couple" className="hero-image" />
                 <div className="overlay-vignette"></div>
             </div>
 
@@ -27,7 +27,7 @@ const CoupleReveal = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: "easeOut" }}
                 >
-                    <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+                    <svg width="45" height="45" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="5" fill="#D4A373" opacity="0.6" />
                         {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
                             <g key={i} transform={`rotate(${angle} 30 30)`}>

@@ -47,8 +47,7 @@ const WelcomeSection = () => {
                             </p>
 
                             <div className="call-to-action">
-                                <p>Clear your calendar.</p>
-                                <p>Cancel your excuses.</p>
+                                <p>Clear your calendar , Cancel your excuses.</p>
                                 <p className="final-note">
                                     Your presence isn’t optional — <strong>it’s part of the celebration!</strong>
                                 </p>

@@ -11,10 +11,10 @@ const weddingFunctions = [
         function: "Mehendi",
         name: "Ishq Da Rang – Mehendi Ke Sang",
         date: "Friday, 27 March 2026",
-        time: "01:00 PM",
+        time: "03:30 PM",
         theme: "MORPANKH — Colours of Peacock's Feather",
         color: "#D4E7C5",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953915/MEHENDI.jpg_gtu78c.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959593/mehendi_mybdx7.png",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954293/mehendi-look_gmz88m.png" // Add specific style guide images here
     },
     {
@@ -22,10 +22,10 @@ const weddingFunctions = [
         function: "Bollywood Night",
         name: "Sama – E – Ishq",
         date: "Friday, 27 March 2026",
-        time: "07:00 PM",
+        time: "08:00 PM",
         theme: "Jewel tones under the night sky",
         color: "#2C2C54",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953914/SANGEET.jpg_k2ge9q.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959006/3ef6124d-7dc6-47df-9c7b-e2e35cf1a35c_vmj3fq.jpg",
         isDark: true,
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955895/68afd5b3-31a9-425a-acac-a0773c8fe765_dfhn8z.jpg"
     },
@@ -33,8 +33,8 @@ const weddingFunctions = [
         number: 3,
         function: "Mayera",
         name: "Bandhan Bhai Behen Ro",
-        date: "Saturday, 28 March 2026",
-        time: "11:00 AM",
+        date: "Saturday, 28 March 2026 - 11:00 AM",
+        time: " (Different Venue For Bride And Groom)  ",
         theme: "Rajasthani Theme",
         color: "#FFE5D4",
         image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953912/MAAYRA.jpg_tuglkg.jpg",
@@ -45,34 +45,24 @@ const weddingFunctions = [
         function: "Reception",
         name: "An Evening of Elegance",
         date: "Saturday, 28 March 2026",
-        time: "07:30 PM",
-        theme: "Black-Tie Reception",
+        time: "07:00 PM",
+        theme: "Royal And Rajwadi ",
         color: "#E8DFEC",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953914/RECEPTION.jpg_sqpogy.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959593/5._PRIYA_SAKSHAM_WEDDING_INVITE_-_PUSHKAR_page-0006.jpg_hqpuyo.jpg",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955933/a9e65b50-4d98-420a-815b-2b0da3b0f9a3_nqdiea.jpg"
     },
     {
         number: 5,
         function: "Haldi & Sajangoth",
-        name: "Rangon Ka Mela",
+        name: "Kesariya Balam",
         date: "Monday, 30 March 2026",
-        time: "12:00 PM",
+        time: "9:30 AM Onwards",
         theme: "Indian Rajasthani Carnival",
         color: "#FFF3CD",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953761/HALDI.jpg_ftt9gg.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959593/5._PRIYA_SAKSHAM_WEDDING_INVITE_-_PUSHKAR_page-0007.jpg_kuri7v.jpg",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955944/a59ce746-c3cf-450b-b14d-497fb0e101e7_vqhhhx.jpg"
     },
-    {
-        number: 6,
-        function: "Mehndi",
-        name: "Sitaron Ki Mehfil",
-        date: "Monday, 30 March 2026",
-        time: "04:00 PM",
-        theme: "Filmy Glam",
-        color: "#F8D7DA",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953915/MEHENDI.jpg_gtu78c.jpg",
-        styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772954293/mehendi-look_gmz88m.png"
-    },
+
     {
         number: 7,
         function: "Sangeet",
@@ -81,39 +71,39 @@ const weddingFunctions = [
         time: "07:00 PM",
         theme: "Filmy Glam",
         color: "#F8D7DA",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953909/SANGEET_2.jpg_tpc30s.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959615/5._PRIYA_SAKSHAM_WEDDING_INVITE_-_PUSHKAR_page-0008.jpg_nchai0.jpg",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955960/b294d8bb-9042-429f-bfcd-c0f7243f5a7c_ng2h2v.jpg"
     },
     {
         number: 8,
-        function: "Pool Party",
+        function: "Holi Party",
         name: "Rangilo Pushkar",
         date: "Tuesday, 31 March 2026",
-        time: "11:00 AM",
+        time: "10:00 AM",
         theme: "Pushkar Holi Theme",
         color: "#D6EAF8",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953915/POOL_PARTY.jpg_p7voxx.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959594/5._PRIYA_SAKSHAM_WEDDING_INVITE_-_PUSHKAR_page-0009.jpg_rw4ljn.jpg",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955982/ef5455f7-540c-47be-b6fc-2a08a16d0231_g29vca.jpg"
     },
     {
         number: 9,
         function: "Baraat",
-        name: "Baraat Swagat & Toran",
+        name: "Baraat  & Toran",
         date: "Tuesday, 31 March 2026",
-        time: "04:30 PM",
+        time: "Toran - 08:00 PM ",
         color: "#FFE5D4",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953906/BARAT.jpg_h8cgwl.jpg",
-        styleImage: "/images/styles/baraat-style.jpg"
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772960925/SAKSHAM_PRIYA_WEDDING_INVITE_PUSHKAR_page-0011.jpg_1_nflwxv.jpg",
+        styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955993/c812da81-f3ed-438b-b606-566c43fc50a0_hpkkd2.jpg"
     },
     {
         number: 10,
         function: "Wedding",
         name: "Saat Sur, Saat Vachan",
         date: "Tuesday, 31 March 2026",
-        time: "07:00 PM",
+        time: "09:00 PM",
         theme: "Musical Pheras",
         color: "#FADBD8",
-        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772953920/PHERE.jpg_pwzodd.jpg",
+        image: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772959595/5._PRIYA_SAKSHAM_WEDDING_INVITE_-_PUSHKAR_page-0011.jpg_kjqhnq.jpg",
         styleImage: "https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955993/c812da81-f3ed-438b-b606-566c43fc50a0_hpkkd2.jpg"
     }
 ];
