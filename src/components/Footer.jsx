@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../style/Footer.css';
 
 const Footer = () => {
@@ -9,12 +8,11 @@ const Footer = () => {
 
     return (
         <footer className="wedding-footer">
-            {/* Texture Overlay */}
             <div className="footer-texture" />
 
             <div className="footer-container">
                 {/* Decorative Top Border */}
-                <div className="footer-ornament reveal">
+                <div className="footer-ornament">
                     <svg width="100" height="20" viewBox="0 0 100 20">
                         <path d="M0 10 Q 25 0 50 10 T 100 10" fill="none" stroke="#D4A373" strokeWidth="1" opacity="0.5" />
                     </svg>
@@ -23,14 +21,11 @@ const Footer = () => {
                 {/* Monogram Section */}
                 <div className="monogram-wrapper">
                     <span className="m-letter">P</span>
-
-                    {/* Logo inserted between P and S */}
                     <img
                         src="https://res.cloudinary.com/dwsv6ggaa/image/upload/v1772955161/logo_wvouwk.png"
                         alt="Wedding Logo"
                         className="footer-mid-logo"
                     />
-
                     <span className="m-letter">S</span>
                 </div>
 
@@ -54,13 +49,16 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Bottom Credits */}
+                {/* Bottom Credits & Navigation */}
                 <div className="footer-bottom">
                     <div className="gold-line-dim" />
+
+                    <button onClick={scrollToTop} className="back-to-top">
+                        Back to Top ↑
+                    </button>
+
                     <p className="credits-text">Crafted with love for our special guests</p>
-                    <p className="credits-text">By</p>
-                    <p className="credits-text">Hiteshi Mirchandani</p>
-                    <p className="credits-text">Jayesh Tapdiya</p>
+                    <p className="credits-names">Hiteshi Mirchandani & Jayesh Tapdiya</p>
 
                     <div className="heart-pulse-container">
                         <div className="pulse-ring"></div>
